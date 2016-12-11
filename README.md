@@ -1,3 +1,4 @@
+
 o# Coursera-exploratory-data-analysis-courseproject2
 Final Assignment
 
@@ -21,18 +22,29 @@ Data for Peer Assessment [29Mb]
 PM2.5 Emissions Data (summarySCC_PM25.rds): This file contains a data frame with all of the PM2.5 emissions data for 1999, 2002, 2005, and 2008. For each year, the table contains number of tons of PM2.5 emitted from a specific type of source for the entire year. Here are the first few rows.
 
 1 ##     fips      SCC Pollutant Emissions  type year
+
 2 ## 4  09001 10100401  PM25-PRI    15.714 POINT 1999
+
 3 ## 8  09001 10100404  PM25-PRI   234.178 POINT 1999
+
 c4 ## 12 09001 10100501  PM25-PRI     0.128 POINT 1999
+
 5 ## 16 09001 10200401  PM25-PRI     2.036 POINT 1999
+
 6 ## 20 09001 10200504  PM25-PRI     0.388 POINT 1999
+
 7 ## 24 09001 10200602  PM25-PRI     1.490 POINT 1999
 
 <span style="color:red">fips</span>: A five-digit number (represented as a string) indicating the U.S. county
+
 <span style="color:red">SCC</span>: The name of the source as indicated by a digit string (see source code classification table)
+
 <span style="color:red">Pollutant</span>: A string indicating the pollutant
+
 <span style="color:red">Emissions</span>: Amount of PM2.5 emitted, in tons
+
 <span style="color:red">type</span>: The type of source (point, non-point, on-road, or non-road)
+
 <span style="color:red">year</span>: The year of emissions recorded
 
 Source Classification Code Table (<span style="color:red">Source_Classification_Code.rds</span>): This table provides a mapping from the SCC digit strings in the Emissions table to the actual name of the PM2.5 source. The sources are categorized in a few different ways from more general to more specific and you may choose to explore whatever categories you think are most useful. For example, source “10100101” is known as “Ext Comb /Electric Gen /Anthracite Coal /Pulverized Coal”.
@@ -41,7 +53,9 @@ You can read each of the two files using the
 <span style="color:red">readRDS()</span>function in R. For example, reading in each file can be done with the following code:
 
 1 ## This first line will likely take a few seconds. Be patient!
+
 2 NEI <- readRDS("summarySCC_PM25.rds")
+
 3 SCC <- readRDS("Source_Classification_Code.rds")
 
 as long as each of those files is in your current working directory (check by calling <span style="color:red">dir()</span> and see if those files are in the listing).
